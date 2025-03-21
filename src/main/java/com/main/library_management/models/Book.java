@@ -1,5 +1,6 @@
 package com.main.library_management.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
@@ -11,6 +12,7 @@ public class Book extends Document {
 
     private String author;
     private String isbbn;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private Date datePublishion;
 
 

@@ -1,10 +1,14 @@
 package com.main.library_management.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class Magazine extends Document{
     private String publisher;
     private String issueNumber;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private Date dateissue;
 
     public String getPublisher() {

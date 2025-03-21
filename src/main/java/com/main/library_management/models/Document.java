@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @MappedSuperclass
+@Entity
 public class Document {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
